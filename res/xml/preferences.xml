@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="connected"
+        android:persistent="true"
+        android:summary="connected as 猪头小队长"
+        android:title="@string/ui_connect_title" />
+
+    <PreferenceScreen
+        android:dependency="connected"
+        android:key="album"
+        android:summary="@string/ui_choose_album_summary"
+        android:title="@string/ui_choose_album_title" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.pinglunbu.photobackup.ChooseAlbumActivity"
+            android:targetPackage="com.pinglunbu.photobackup" />
+    </PreferenceScreen>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="wifi_only"
+        android:persistent="true"
+        android:summary="@string/ui_wifi_only_desc"
+        android:title="@string/ui_wifi_only_label" />
+
+    <PreferenceScreen
+        android:key="version"
+        android:summary="@string/version"
+        android:title="@string/ui_version_title" >
+    </PreferenceScreen>
+
+</PreferenceScreen>
