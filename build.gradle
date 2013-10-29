@@ -1,0 +1,20 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
+}
+
+allprojects {
+    group = 'com.pinglunbu.photobackup'
+
+    tasks.withType(Compile) {
+        options.encoding = 'UTF-8'
+    }
+}
+
+task assemble{}
